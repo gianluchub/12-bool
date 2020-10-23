@@ -1,0 +1,30 @@
+.container {
+  min-height: 200px;
+  background-color: pink;
+  border: 1px solid black;
+}
+
+[class*='col-'] {
+  position: relative;
+  border: 1px solid black;
+  padding: 5px;
+  min-height: 200px;
+  /* height: 120px; */
+}
+
+[class*='col-'] > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container [class*='col-'] .container [class*='col-'] {
+  background-color: lightcoral;
+  border: 1px solid white;
+}
+
+.container [class*='col-'] .container {
+  height: 100%;
+  border: 0px;
+}
